@@ -28,7 +28,6 @@ const TextWidget = ({
   const _onFocus = ({
     target: { value },
   }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
-  const name = Math.random().toString();
 
   return (
     <FormControl
@@ -42,7 +41,6 @@ const TextWidget = ({
         autoFocus={autofocus}
         required={required}
         disabled={disabled || readonly}
-        name={name}
         type={schema.type as string}
         value={value ? value : ''}
         onChange={_onChange}
