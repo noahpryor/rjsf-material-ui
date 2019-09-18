@@ -26,6 +26,7 @@ const UpDownWidget = ({
   const _onFocus = ({
     target: { value },
   }: React.FocusEvent<HTMLInputElement>) => onFocus(id, value);
+  const name = Math.random().toString();
 
   return (
     <FormControl
