@@ -21,8 +21,6 @@ const RadioWidget = ({
   onBlur,
   onFocus,
 }: WidgetProps) => {
-  // Generating a unique field name to identify this set of radio buttons
-  const name = Math.random().toString();
   const { enumOptions, enumDisabled } = options;
 
   const _onChange = ({}, value: any) =>
@@ -39,7 +37,7 @@ const RadioWidget = ({
     <FormControl fullWidth={true} required={required}>
       <FormLabel htmlFor={id}>{label || schema.title}</FormLabel>
       <RadioGroup
-        name={name}
+        name={id}
         value={`${value}`}
         row={row as boolean}
         onChange={_onChange}
